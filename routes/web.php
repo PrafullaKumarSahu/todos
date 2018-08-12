@@ -10,11 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/new', [
-	'uses' => 'PagesController@new'
-]);
+Route::resource('todos', 'TodosController');
